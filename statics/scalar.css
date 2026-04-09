@@ -1,0 +1,243 @@
+/* change ACCENT if needed */
+:root {
+  font-feature-settings: 'calt', 'liga', 'zero';
+}
+
+.light-mode {
+  --scalar-color-1: hsl(0, 0%, 0%);
+  --scalar-color-2: hsl(234, 16%, 35%);
+  --scalar-color-3: hsl(233, 10%, 47%);
+  --scalar-color-accent: hsl(232, 97%, 44%);
+  --scalar-background-1: hsl(232, 97%, 96%);
+  --scalar-background-2: hsl(232, 97%, 92%);
+  --scalar-background-3: hsl(232, 97%, 87%);
+  --scalar-background-accent: #8ab4f81f;
+  --scalar-border-color: rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode {
+  --scalar-color-1: hsl(0, 0%, 100%);
+  --scalar-color-2: hsl(226, 64%, 88%);
+  --scalar-color-3: hsl(228, 24%, 72%);
+  --scalar-color-accent: hsl(232, 97%, 85%);
+  --scalar-background-1: hsl(232, 97%, 4%);
+  --scalar-background-2: hsl(232, 97%, 8%);
+  --scalar-background-3: hsl(232, 97%, 13%);
+  --scalar-background-accent: #8ab4f81f;
+  --scalar-border-color: rgba(255, 255, 255, 0.1);
+}
+
+.light-mode .t-doc__sidebar,
+.dark-mode .t-doc__sidebar {
+  --scalar-sidebar-background-1: var(--scalar-background-1);
+  --scalar-sidebar-item-hover-color: var(--scalar-color-1);
+  --scalar-sidebar-item-hover-background: var(--scalar-mutex-2);
+  --scalar-sidebar-item-active-background: var(--scalar-mutex-3);
+  --scalar-sidebar-border-color: var(--scalar-border-color);
+  --scalar-sidebar-color-1: var(--scalar-color-1);
+  --scalar-sidebar-color-2: var(--scalar-color-2);
+  --scalar-sidebar-color-active: var(--scalar-color-accent);
+  --scalar-sidebar-search-background: var(--scalar-mutex-2);
+  --scalar-sidebar-search-border-color: var(--scalar-background-2);
+  --scalar-sidebar-search-color: var(--scalar-color-3);
+}
+
+.light-mode {
+  --scalar-button-1: #0a0a0a;
+  --scalar-button-1-color: #fff;
+  --scalar-button-1-hover: #212121;
+  --scalar-color-green: hsl(115, 54%, 44%);
+  --scalar-color-red: hsl(343, 81%, 44%);
+  --scalar-color-yellow: hsl(41, 86%, 44%);
+  --scalar-color-blue: hsl(217, 92%, 44%);
+  --scalar-color-orange: hsl(23, 92%, 44%);
+  --scalar-color-purple: hsl(267, 84%, 44%);
+  --scalar-scrollbar-color: rgba(0, 0, 0, 0.18);
+  --scalar-scrollbar-color-active: rgba(0, 0, 0, 0.36);
+  --scalar-logo: url('statics/scalar-logo-dark.svg');
+  --project-logo: url('statics/logo-dark.svg');
+  --scalar-mutex-2: hsl(232, 97%, 92%);
+  --scalar-mutex-3: hsl(232, 97%, 87%);
+}
+
+.dark-mode {
+  --scalar-button-1: #f5f5f5;
+  --scalar-button-1-color: #000;
+  --scalar-button-1-hover: #dedede;
+  --scalar-color-green: hsl(115, 54%, 76%);
+  --scalar-color-red: hsl(343, 81%, 75%);
+  --scalar-color-yellow: hsl(41, 86%, 83%);
+  --scalar-color-blue: hsl(217, 92%, 76%);
+  --scalar-color-orange: hsl(23, 92%, 75%);
+  --scalar-color-purple: hsl(267, 84%, 81%);
+  --scalar-scrollbar-color: rgba(255, 255, 255, 0.24);
+  --scalar-scrollbar-color-active: rgba(255, 255, 255, 0.48);
+  --scalar-logo: url('statics/scalar-logo-light.svg');
+  --project-logo: url('statics/logo-light.svg');
+  --scalar-mutex-2: hsl(232, 97%, 8%);
+  --scalar-mutex-3: hsl(232, 97%, 13%);
+}
+
+.client-libraries-heading,
+.scalar-reference-intro-auth.scalar-client.introduction-card-item div section div,
+.scalar-reference-intro-server.scalar-client.introduction-card-item label {
+  background-color: var(--scalar-mutex-2) !important;
+}
+
+.dark-mode .client-libraries-heading,
+.dark-mode .scalar-reference-intro-auth.scalar-client.introduction-card-item div section div,
+.dark-mode .scalar-reference-intro-server.scalar-client.introduction-card-item label {
+  background-color: var(--scalar-mutex-2) !important;
+}
+
+.client-libraries-content,
+.selected-client.card-footer,
+.introduction-card-item .border.rounded-b-lg {
+  background: var(--scalar-mutex-2) !important;
+}
+
+.dark-mode .client-libraries-content,
+.dark-mode .selected-client.card-footer,
+.dark-mode .introduction-card-item .border.rounded-b-lg {
+  background: var(--scalar-mutex-2) !important;
+}
+
+.dark-mode .scalar-card * {
+  --scalar-background-1: transparent !important;
+  --scalar-background-2: transparent !important;
+  --scalar-background-3: transparent !important;
+  background: var(--scalar-mutex-2) !important;
+}
+
+.light-mode .dark-mode.scalar-card *,
+.light-mode .dark-mode.scalar-card {
+  --scalar-background-1: transparent !important;
+  --scalar-background-2: transparent !important;
+  --scalar-background-3: transparent !important;
+}
+
+.light-mode .dark-mode.scalar-card {
+  background: transparent !important;
+}
+
+.scalar-app .sidebar-heading-link-title {
+  font-weight: 500 !important;
+}
+
+.scalar-card-checkbox {
+  display: none !important;
+}
+
+.darklight-reference .flex.items-center {
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 10px;
+}
+
+.group\/toggle > .size-\[23px\] {
+  top: 50%;
+  transform: translateY(-50%) translateX(-5%);
+}
+
+.no-underline[href*='scalar.com'] {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+}
+
+.no-underline[href*='scalar.com']::after {
+  content: '';
+  margin-top: 0px;
+  background-image: var(--scalar-logo);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+}
+
+.scalar-app .introduction-section .section-header-label {
+  display: inline-flex;
+  margin-top: 20px;
+  align-items: center;
+  gap: 10px;
+}
+
+.scalar-app .introduction-section .section-header-label::before {
+  content: '';
+  margin-top: 0px;
+  background-image: var(--project-logo);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+
+/* get blue */
+/* post green */
+/* put orange */
+/* patch yellow */
+/* delete red */
+.uppercase.sidebar-heading-type.sidebar-heading-type--get,
+.uppercase.endpoint-method[style*='--scalar-color-blue'],
+.request-method[style*='--scalar-color-blue'] {
+  color: var(--scalar-color-green) !important;
+}
+
+.uppercase.sidebar-heading-type.sidebar-heading-type--post,
+.uppercase.endpoint-method[style*='--scalar-color-green'],
+.request-method[style*='--scalar-color-green'] {
+  color: var(--scalar-color-yellow) !important;
+}
+
+.uppercase.sidebar-heading-type.sidebar-heading-type--put,
+.uppercase.endpoint-method[style*='--scalar-color-orange'],
+.request-method[style*='--scalar-color-orange'] {
+  color: var(--scalar-color-blue) !important;
+}
+
+.uppercase.sidebar-heading-type.sidebar-heading-type--patch,
+.uppercase.endpoint-method[style*='--scalar-color-yellow'],
+.request-method[style*='--scalar-color-yellow'] {
+  color: var(--scalar-color-purple) !important;
+}
+
+.uppercase.sidebar-heading-type.sidebar-heading-type--delete,
+.uppercase.endpoint-method[style*='--scalar-color-red'],
+.request-method[style*='--scalar-color-red'] {
+  color: var(--scalar-color-red) !important;
+}
+
+.scalar-app .sidebar-heading-link-method .sidebar-heading-type--get,
+.scalar-app .sidebar-heading-link-method .sidebar-heading-type--post,
+.scalar-app .sidebar-heading-link-method .sidebar-heading-type--put,
+.scalar-app .sidebar-heading-link-method .sidebar-heading-type--patch,
+.scalar-app .sidebar-heading-link-method .sidebar-heading-type--delete,
+.scalar-app .sidebar-heading-link-method .sidebar-heading-type--options,
+.endpoint span.endpoint-method {
+  margin-top: 2px !important;
+  /* font-family: 'Inter', sans-serif; */
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.request-method {
+  font-weight: 700;
+}
+
+.badge {
+  font-weight: 600;
+  background-color: var(--scalar-background-3) !important;
+}
+
+.property-example {
+  display: none !important;
+}
+
+/*# sourceMappingURL=scalar.css.map */
