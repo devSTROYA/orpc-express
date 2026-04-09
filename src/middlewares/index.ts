@@ -1,0 +1,1 @@
+export { openapiMiddleware } from './openapi';
