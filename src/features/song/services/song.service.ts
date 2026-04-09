@@ -1,41 +1,31 @@
-import { os } from '@orpc/server';
 import { SongRepository } from '../repositories';
-import { CreateSongRequestSchema } from '../usecases/create-song';
-import { FindSongRequestSchema } from '../usecases/find-song';
-import { GetSongsRequestSchema } from '../usecases/get-songs';
-import { RemoveSongRequestSchema } from '../usecases/remove-song';
-import { UpdateSongRequestSchema } from '../usecases/update-song';
+import { CreateSongRequest, CreateSongResponse } from '../usecases/create-song';
+import { FindSongRequest, FindSongResponse } from '../usecases/find-song';
+import { GetSongsRequest, GetSongsResponse } from '../usecases/get-songs';
+import { RemoveSongRequest, RemoveSongResponse } from '../usecases/remove-song';
+import { UpdateSongRequest, UpdateSongResponse } from '../usecases/update-song';
 
 export class SongService {
   constructor(readonly repository: SongRepository) {}
 
-  get list() {
-    return os.input(GetSongsRequestSchema).handler(async ({ input }) => {
-      return await this.repository.getSongs(input);
-    });
+  async listSongs(request: GetSongsRequest): Promise<GetSongsResponse> {
+    return await this.repository.getSongs(request);
   }
 
-  get find() {
-    return os.input(FindSongRequestSchema).handler(async ({ input }) => {
-      return await this.repository.findSong(input);
-    });
+  async findSong(request: FindSongRequest): Promise<FindSongResponse> {
+    const data = await this.repository.findSong(request);
+    return { data };
   }
 
-  get create() {
-    return os.input(CreateSongRequestSchema).handler(async ({ input }) => {
-      return await this.repository.createSong(input);
-    });
+  async createSong(request: CreateSongRequest): Promise<CreateSongResponse> {
+    return await this.repository.createSong(request);
   }
 
-  get update() {
-    return os.input(UpdateSongRequestSchema).handler(async ({ input }) => {
-      return await this.repository.updateSong(input);
-    });
+  async updateSong(request: UpdateSongRequest): Promise<UpdateSongResponse> {
+    return await this.repository.updateSong(request);
   }
 
-  get delete() {
-    return os.input(RemoveSongRequestSchema).handler(async ({ input }) => {
-      return await this.repository.deleteSong(input);
-    });
+  async deleteSong(request: RemoveSongRequest): Promise<RemoveSongResponse> {
+    return await this.repository.deleteSong(request);
   }
 }
