@@ -1,3 +1,4 @@
+import { ORPCError } from '@orpc/client';
 import { SongRepository } from '../repositories';
 import { CreateSongRequest, CreateSongResponse } from '../usecases/create-song';
 import { FindSongRequest, FindSongResponse } from '../usecases/find-song';
@@ -14,6 +15,11 @@ export class SongService {
 
   async findSong(request: FindSongRequest): Promise<FindSongResponse> {
     const data = await this.repository.findSong(request);
+
+    if (!data) {
+      throw new ORPCError('NOT_FOUND', { message: 'RESOURCE_NOT_FOUND' });
+    }
+
     return { data };
   }
 
