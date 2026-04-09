@@ -1,1 +1,2 @@
-export { openapiMiddleware } from './openapi';
+export { openApiGenerator, openapiMiddleware } from './openapi';
+export { rpcMiddleware } from './rpc';

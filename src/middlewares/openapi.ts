@@ -1,5 +1,6 @@
+import { OpenAPIGenerator } from '@orpc/openapi';
 import { OpenAPIHandler } from '@orpc/openapi/node';
-import { ZodSmartCoercionPlugin } from '@orpc/zod';
+import { ZodSmartCoercionPlugin, ZodToJsonSchemaConverter } from '@orpc/zod';
 import { NextFunction, Request, Response } from 'express';
 import { songRouter } from '../features/song';
 
@@ -23,3 +24,7 @@ export const openapiMiddleware = async (req: Request, res: Response, next: NextF
 
   next();
 };
+
+export const openApiGenerator = new OpenAPIGenerator({
+  schemaConverters: [new ZodToJsonSchemaConverter()],
+});
