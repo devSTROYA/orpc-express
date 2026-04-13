@@ -12,7 +12,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": {
+    "name": "Mudzia Hutama",
+    "email": "mudzia.hutama@gmail.com",
+    "url": "https://github.com/devSTROYA"
+  },
   "license": "ISC",
   "packageManager": "pnpm@10.11.0",
   "dependencies": {
